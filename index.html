@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatório Meta Ads – Home Imobiliária</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Relatório Meta Ads</h1>
+      <p class="subtitle">Métricas de anúncios – Facebook e Instagram</p>
+      <p class="portais">Home Imobiliária</p>
+    </header>
+
+    <main class="content">
+      <div class="report-intro">
+        <h2>Introdução</h2>
+        <p>Este relatório consolida as métricas de desempenho dos anúncios da <strong>Home Imobiliária</strong> nas plataformas <strong>Meta (Facebook e Instagram)</strong>: cliques, alcance, impressões, valor gasto, principais anúncios, campanhas e perfil demográfico.</p>
+      </div>
+
+      <div class="report-resumo">
+        <h2>Resumo</h2>
+        <div class="resumo-colunas">
+          <div class="wimoveis-card wimoveis-card-total">
+            <span class="wimoveis-card-total-label">Valor total investido</span>
+            <span class="wimoveis-card-total-num">R$ 8.492,29</span>
+          </div>
+          <div class="wimoveis-card wimoveis-card-total">
+            <span class="wimoveis-card-total-label">Valor total de vendas</span>
+            <span class="wimoveis-card-total-num">R$ 0</span>
+          </div>
+        </div>
+        <div class="resumo-desempenho">
+          <h3>Desempenho do período</h3>
+          <p>No período analisado, os anúncios geraram <strong>4.559 cliques</strong> (<span class="variacao-pos">+45,47%</span> em relação ao período anterior), com <strong>453.329</strong> pessoas alcançadas e <strong>1.290.107</strong> impressões. O investimento em mídia foi de <strong>R$ 8.492,29</strong> (<span class="variacao-pos">+52,97%</span>), com CPC médio de R$ 1,86 e CPM de R$ 6,58. Foram iniciadas <strong>223 conversas</strong>. O alcance apresentou <span class="variacao-neg">variação negativa (-11,43%)</span> comparado ao mês anterior, enquanto cliques e impressões <span class="variacao-pos">evoluíram de forma positiva</span>. A maior parte dos cliques veio do <strong>Instagram</strong> (3.848), seguido do <strong>Facebook</strong> (708).</p>
+        </div>
+      </div>
+
+      <!-- 1. Visão Geral -->
+      <section id="secao-visao-geral">
+        <div class="card section-card">
+          <div class="card-logo-row">
+            <div class="card-header">1. Visão geral</div>
+          </div>
+          <div class="card-body">
+            <div class="wimoveis-cards">
+              <div class="wimoveis-card wimoveis-card-chart" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>Principais métricas (visão geral)</h3>
+                  <div class="chart-wrapper chart-barras-lateral"><canvas id="chartVisaoGeral"></canvas></div>
+                </div>
+              </div>
+              <div class="wimoveis-card" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>Tabela de métricas</h3>
+                <table class="report-table">
+                  <thead>
+                    <tr><th>Métrica</th><th class="num">Valor</th><th class="num">Variação</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Cliques (todos)</td><td class="num">4.559</td><td class="num variacao-pos">45,47%</td></tr>
+                    <tr><td>CTR (todos)</td><td class="num">0,35%</td><td class="num variacao-pos">7,89%</td></tr>
+                    <tr><td>CPC (todos)</td><td class="num">1,86</td><td class="num variacao-pos">5,16%</td></tr>
+                    <tr><td>Alcance</td><td class="num">453.329</td><td class="num variacao-neg">-11,43%</td></tr>
+                    <tr><td>Frequência</td><td class="num">2,85</td><td class="num variacao-pos">52,22%</td></tr>
+                    <tr><td>Impressões</td><td class="num">1.290.107</td><td class="num variacao-pos">34,83%</td></tr>
+                    <tr><td>Valor gasto</td><td class="num">8.492,29</td><td class="num variacao-pos">52,97%</td></tr>
+                    <tr><td>CPM médio</td><td class="num">6,58</td><td class="num variacao-pos">13,46%</td></tr>
+                    <tr><td>Cadastros (Formulário)</td><td class="num">0</td><td class="num">0%</td></tr>
+                    <tr><td>Conversas iniciadas</td><td class="num">223</td><td class="num">0%</td></tr>
+                    <tr><td>Compras no site</td><td class="num">0</td><td class="num">0%</td></tr>
+                    <tr><td>ROAS</td><td class="num">0</td><td class="num">0%</td></tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Comparação com período anterior -->
+      <section id="secao-comparacao">
+        <div class="card section-card">
+          <div class="card-logo-row">
+            <div class="card-header">2. Comparação com período anterior</div>
+          </div>
+          <div class="card-body">
+            <div class="wimoveis-cards">
+              <div class="wimoveis-card wimoveis-card-chart" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>Período atual vs anterior</h3>
+                  <div class="chart-wrapper chart-barras-vertical" style="height: 260px;"><canvas id="chartComparacao"></canvas></div>
+                </div>
+              </div>
+              <div class="wimoveis-card" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>Tabela comparativa</h3>
+                  <table class="report-table">
+                  <thead>
+                    <tr><th>Métrica</th><th class="num">Período atual</th><th class="num">Período anterior</th><th class="num">Variação</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Impressões</td><td class="num">1.290.107</td><td class="num">956.860</td><td class="num variacao-pos">34,83%</td></tr>
+                    <tr><td>Alcance</td><td class="num">453.329</td><td class="num">511.823</td><td class="num variacao-neg">-11,43%</td></tr>
+                    <tr><td>Cliques</td><td class="num">4.559</td><td class="num">3.134</td><td class="num variacao-pos">45,47%</td></tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Resultado por plataforma (clique/alcance) -->
+      <section id="secao-plataforma-clique-alcance">
+        <div class="card section-card">
+          <div class="card-logo-row">
+            <div class="card-header">3. Resultado por plataforma (clique / alcance)</div>
+          </div>
+          <div class="card-body">
+            <div class="wimoveis-cards">
+              <div class="wimoveis-row-resumo">
+                <div class="wimoveis-card wimoveis-card-chart">
+                  <div class="bloco-dado">
+                    <h3>Cliques por plataforma</h3>
+                    <div class="chart-wrapper chart-rosca"><canvas id="chartCliquesPlataforma"></canvas></div>
+                  </div>
+                </div>
+                <div class="wimoveis-card wimoveis-card-chart">
+                  <div class="bloco-dado">
+                    <h3>Valor gasto por plataforma</h3>
+                    <div class="chart-wrapper chart-rosca"><canvas id="chartValorPlataforma"></canvas></div>
+                  </div>
+                </div>
+              </div>
+              <div class="wimoveis-row-resumo">
+                <div class="wimoveis-card" style="grid-column: 1 / -1;">
+                  <div class="bloco-dado">
+                    <h3>Cliques e alcance por rede (tabela)</h3>
+                    <table class="report-table">
+                      <thead>
+                        <tr><th>Métrica</th><th class="num">Valor</th><th class="num">Variação</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>Cliques Facebook</td><td class="num">708</td><td class="num variacao-pos">17,61%</td></tr>
+                        <tr><td>Cliques Instagram</td><td class="num">3.848</td><td class="num variacao-pos">52,34%</td></tr>
+                        <tr><td>Alcance Instagram</td><td class="num">420.230</td><td class="num variacao-pos">12,85%</td></tr>
+                        <tr><td>Alcance Facebook</td><td class="num">44.794</td><td class="num variacao-pos">21,27%</td></tr>
+                        <tr><td>Frequência Facebook</td><td class="num">1,83</td><td class="num variacao-pos">34,65%</td></tr>
+                        <tr><td>Frequência Instagram</td><td class="num">2,87</td><td class="num variacao-pos">53,05%</td></tr>
+                        <tr><td>Impressões Instagram</td><td class="num">1.208.064</td><td class="num variacao-pos">33,38%</td></tr>
+                        <tr><td>Impressões Facebook</td><td class="num">81.867</td><td class="num variacao-pos">63,29%</td></tr>
+                        <tr><td>Valor gasto Facebook</td><td class="num">571,21</td><td class="num variacao-pos">134,88%</td></tr>
+                        <tr><td>Valor gasto Instagram</td><td class="num">7.918,98</td><td class="num variacao-pos">49,47%</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Resultado por plataforma (tabela principal) -->
+      <section id="secao-plataforma-tabela">
+        <div class="card section-card">
+          <div class="card-logo-row">
+            <div class="card-header">4. Resultado por plataforma (tabela principal)</div>
+          </div>
+          <div class="card-body">
+            <div class="wimoveis-cards">
+              <div class="wimoveis-row-resumo">
+                <div class="wimoveis-card wimoveis-card-chart">
+                  <div class="bloco-dado">
+                    <h3>Cliques por plataforma</h3>
+                    <div class="chart-wrapper chart-barras-vertical" style="height: 220px;"><canvas id="chartPlataformaCliques"></canvas></div>
+                  </div>
+                </div>
+                <div class="wimoveis-card wimoveis-card-chart">
+                  <div class="bloco-dado">
+                    <h3>CPC por plataforma</h3>
+                    <div class="chart-wrapper chart-barras-vertical" style="height: 220px;"><canvas id="chartPlataformaCPC"></canvas></div>
+                  </div>
+                </div>
+              </div>
+              <div class="wimoveis-card" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>CPC, alcance, frequência, cliques e CPM (tabela)</h3>
+                  <table class="report-table">
+                  <thead>
+                    <tr><th>Plataforma</th><th class="num">CPC</th><th class="num">Alcance</th><th class="num">Frequência</th><th class="num">Cliques</th><th class="num">CPM</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Instagram</td><td class="num">2,06</td><td class="num">420.230</td><td class="num">2,87</td><td class="num">3.848</td><td class="num">6,56</td></tr>
+                    <tr><td>Facebook</td><td class="num">0,81</td><td class="num">44.794</td><td class="num">1,83</td><td class="num">708</td><td class="num">6,98</td></tr>
+                    <tr><td>WhatsApp</td><td class="num">0,70</td><td class="num">170</td><td class="num">1,04</td><td class="num">3</td><td class="num">11,93</td></tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Principais anúncios -->
+      <section id="secao-principais-anuncios">
+        <div class="card section-card">
+          <div class="card-logo-row">
+            <div class="card-header">5. Principais anúncios</div>
+          </div>
+          <div class="card-body">
+            <div class="wimoveis-cards">
+              <div class="wimoveis-card" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>Top anúncios por cliques</h3>
+                  <div class="chart-wrapper chart-barras-lateral"><canvas id="chartAnuncios"></canvas></div>
+                </div>
+              </div>
+              <div class="wimoveis-card" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>Tabela completa</h3>
+                <table class="report-table">
+                  <thead>
+                    <tr><th>Anúncio</th><th class="num">Cliques</th><th class="num">CPC</th><th class="num">Alcance</th><th class="num">Frequência</th><th class="num">CPM</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Apartamento para Aluguel</td><td class="num">513</td><td class="num">1,29</td><td class="num">17.274</td><td class="num">1,69</td><td class="num">22,73</td></tr>
+                    <tr><td>Alugar um imóvel parece simples</td><td class="num">444</td><td class="num">1,46</td><td class="num">267.582</td><td class="num">1,94</td><td class="num">1,24</td></tr>
+                    <tr><td>Converse conosco Apartamento Essence</td><td class="num">427</td><td class="num">1,73</td><td class="num">27.909</td><td class="num">2,11</td><td class="num">12,55</td></tr>
+                    <tr><td>Lago Sul terreno legado</td><td class="num">327</td><td class="num">1,28</td><td class="num">11.871</td><td class="num">1,53</td><td class="num">23,01</td></tr>
+                    <tr><td>Existem imóveis no Noroeste</td><td class="num">301</td><td class="num">2,10</td><td class="num">22.832</td><td class="num">1,79</td><td class="num">15,43</td></tr>
+                    <tr><td>Converse conosco Casa Dom</td><td class="num">252</td><td class="num">2,26</td><td class="num">29.622</td><td class="num">2,67</td><td class="num">7,19</td></tr>
+                    <tr><td>Entre em contato conosco</td><td class="num">249</td><td class="num">2,50</td><td class="num">20.888</td><td class="num">2,01</td><td class="num">14,83</td></tr>
+                    <tr><td>Mais que ponto comercial</td><td class="num">202</td><td class="num">1,24</td><td class="num">5.802</td><td class="num">1,43</td><td class="num">30,25</td></tr>
+                    <tr><td>Lago Sul terreno legado (2)</td><td class="num">202</td><td class="num">2,35</td><td class="num">26.370</td><td class="num">2,85</td><td class="num">6,32</td></tr>
+                    <tr><td>Apartamento Selection</td><td class="num">193</td><td class="num">1,81</td><td class="num">20.559</td><td class="num">2,81</td><td class="num">6,04</td></tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Principais campanhas -->
+      <section id="secao-principais-campanhas">
+        <div class="card section-card">
+          <div class="card-logo-row">
+            <div class="card-header">6. Principais campanhas</div>
+          </div>
+          <div class="card-body">
+            <div class="wimoveis-cards">
+              <div class="wimoveis-card" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>Top campanhas por cliques</h3>
+                  <div class="chart-wrapper chart-barras-lateral"><canvas id="chartCampanhas"></canvas></div>
+                </div>
+              </div>
+              <div class="wimoveis-card" style="grid-column: 1 / -1;">
+                <div class="bloco-dado">
+                  <h3>Tabela completa</h3>
+                  <table class="report-table">
+                  <thead>
+                    <tr><th>Campanha</th><th class="num">Cliques</th><th class="num">CPC</th><th class="num">Alcance</th><th class="num">Frequência</th><th class="num">CPM</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>CAMP LOCAÇÃO NOROESTE</td><td class="num">566</td><td class="num">1,33</td><td class="num">19.080</td><td class="num">1,77</td><td class="num">22,31</td></tr>
+                    <tr><td>CAMP LOJA ANA CAPRI</td><td class="num">451</td><td class="num">2,43</td><td class="num">40.143</td><td class="num">2,91</td><td class="num">9,37</td></tr>
+                    <tr><td>CAMP REC</td><td class="num">444</td><td class="num">1,46</td><td class="num">267.582</td><td class="num">1,94</td><td class="num">1,24</td></tr>
+                    <tr><td>CODEAP219 VIDEO</td><td class="num">433</td><td class="num">1,75</td><td class="num">28.032</td><td class="num">2,11</td><td class="num">12,78</td></tr>
+                    <tr><td>CAMP QL16</td><td class="num">395</td><td class="num">2,32</td><td class="num">33.739</td><td class="num">2,74</td><td class="num">9,95</td></tr>
+                    <tr><td>ENGAJ LOTE QI16</td><td class="num">354</td><td class="num">1,21</td><td class="num">11.373</td><td class="num">1,67</td><td class="num">22,57</td></tr>
+                    <tr><td>CAMP QL26 LOTE</td><td class="num">327</td><td class="num">1,28</td><td class="num">11.871</td><td class="num">1,53</td><td class="num">23,01</td></tr>
+                    <tr><td>CASA NOR PILOTO</td><td class="num">301</td><td class="num">2,10</td><td class="num">22.832</td><td class="num">1,79</td><td class="num">15,43</td></tr>
+                    <tr><td>CAMP SELEC</td><td class="num">295</td><td class="num">2,25</td><td class="num">25.820</td><td class="num">2,96</td><td class="num">8,67</td></tr>
+                    <tr><td>ENGJ SANTORINI</td><td class="num">203</td><td class="num">2,28</td><td class="num">16.169</td><td class="num">2,05</td><td class="num">13,92</td></tr>
+                  </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Demográfico -->
+      <section id="secao-demografico">
+        <div class="card section-card">
+          <div class="card-logo-row">
+            <div class="card-header">7. Demográfico (cliques por gênero)</div>
+          </div>
+          <div class="card-body">
+            <div class="wimoveis-cards">
+              <div class="wimoveis-row-resumo">
+                <div class="wimoveis-card wimoveis-card-chart">
+                  <div class="bloco-dado">
+                    <h3>Distribuição por gênero</h3>
+                    <div class="chart-wrapper chart-rosca"><canvas id="chartGenero"></canvas></div>
+                    <p class="chart-total">Total: 4.559 cliques</p>
+                  </div>
+                </div>
+                <div class="wimoveis-card">
+                  <div class="bloco-dado">
+                    <h3>Tabela</h3>
+                    <table class="report-table">
+                      <thead>
+                        <tr><th>Gênero</th><th class="num">Cliques</th><th class="num">Percentual</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr><td>Homem</td><td class="num">2.378</td><td class="num">52,2%</td></tr>
+                        <tr><td>Mulher</td><td class="num">2.166</td><td class="num">47,5%</td></tr>
+                        <tr><td>Desconhecido</td><td class="num">15</td><td class="num">0,3%</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+  Chart.register(ChartDataLabels);
+  var coresPaleta = ["rgba(37, 99, 235, 0.9)", "rgba(5, 150, 105, 0.9)", "rgba(217, 119, 6, 0.9)", "rgba(220, 38, 38, 0.9)", "rgba(124, 58, 237, 0.9)", "rgba(8, 145, 178, 0.9)", "rgba(101, 163, 13, 0.9)", "rgba(234, 88, 12, 0.9)", "rgba(147, 51, 234, 0.9)", "rgba(190, 18, 60, 0.9)"];
+  var pluginTotalCentro = {
+    id: 'totalCentro',
+    afterDraw: function(chart) {
+      if (chart.config.type !== 'doughnut' || !chart.options.centerTotal) return;
+      var ctx = chart.ctx, chartArea = chart.chartArea;
+      if (!chartArea) return;
+      var total = chart.data.datasets[0].data.reduce(function(a, b) { return a + b; }, 0);
+      var x = (chartArea.left + chartArea.right) / 2, y = (chartArea.top + chartArea.bottom) / 2;
+      ctx.save();
+      ctx.font = 'bold 20px Inter, sans-serif';
+      ctx.fillStyle = '#1e293b';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(typeof total === 'number' && total % 1 !== 0 ? total.toFixed(2) : total, x, y - 6);
+      ctx.font = '11px Inter, sans-serif';
+      ctx.fillStyle = '#64748b';
+      ctx.fillText(chart.options.centerLabel || 'total', x, y + 12);
+      ctx.restore();
+    }
+  };
+
+  // 1. Visão geral – principais métricas (barras horizontais)
+  var elVisaoGeral = document.getElementById('chartVisaoGeral');
+  if (elVisaoGeral) {
+    new Chart(elVisaoGeral, {
+      type: 'bar',
+      data: {
+        labels: ['Cliques', 'Alcance (mil)', 'Impressões (mil)', 'Valor gasto (R$)'],
+        datasets: [{ label: 'Valor', data: [4559, 453, 1290, 8492], backgroundColor: [coresPaleta[0], coresPaleta[1], coresPaleta[2], coresPaleta[3]], borderColor: '#fff', borderWidth: 1 }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, datalabels: { anchor: 'end', align: 'end', color: '#1e293b', font: { weight: 'bold', size: 12 }, formatter: function(v) { return v >= 1000 ? v.toLocaleString('pt-BR') : v; } } },
+        layout: { padding: { left: 20, right: 16 } },
+        scales: { x: { beginAtZero: true, grid: { color: '#f1f5f9' } }, y: { grid: { display: false }, ticks: { font: { weight: 'bold', size: 11 } } } }
+      }
+    });
+  }
+
+  // 2. Comparação – período atual vs anterior (barras verticais agrupadas)
+  var elComparacao = document.getElementById('chartComparacao');
+  if (elComparacao) {
+    new Chart(elComparacao, {
+      type: 'bar',
+      data: {
+        labels: ['Impressões (mil)', 'Alcance (mil)', 'Cliques (mil)'],
+        datasets: [
+          { label: 'Período atual', data: [1290, 453, 4.56], backgroundColor: coresPaleta[0], borderColor: '#fff', borderWidth: 1 },
+          { label: 'Período anterior', data: [957, 512, 3.13], backgroundColor: coresPaleta[4], borderColor: '#fff', borderWidth: 1 }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'top' }, datalabels: { anchor: 'end', align: 'top', color: '#1e293b', font: { size: 11 }, formatter: function(v) { return v; } } },
+        scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: '#f1f5f9' } } }
+      }
+    });
+  }
+
+  // 3. Cliques por plataforma (rosca)
+  var elCliquesPlat = document.getElementById('chartCliquesPlataforma');
+  if (elCliquesPlat) {
+    new Chart(elCliquesPlat, {
+      type: 'doughnut',
+      data: {
+        labels: ['Instagram', 'Facebook', 'WhatsApp'],
+        datasets: [{ data: [3848, 708, 3], backgroundColor: [coresPaleta[0], coresPaleta[1], '#94a3b8'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: { responsive: true, maintainAspectRatio: false, centerTotal: true, centerLabel: 'cliques', cutout: '55%', plugins: { legend: { position: 'right' }, datalabels: { color: '#fff', font: { weight: 'bold', size: 14 }, formatter: function(v) { return v > 0 ? v : ''; } } } },
+      plugins: [pluginTotalCentro]
+    });
+  }
+
+  // 3. Valor gasto por plataforma (rosca)
+  var elValorPlat = document.getElementById('chartValorPlataforma');
+  if (elValorPlat) {
+    new Chart(elValorPlat, {
+      type: 'doughnut',
+      data: {
+        labels: ['Instagram', 'Facebook', 'WhatsApp'],
+        datasets: [{ data: [7918.98, 571.21, 2.1], backgroundColor: [coresPaleta[0], coresPaleta[1], '#94a3b8'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: { responsive: true, maintainAspectRatio: false, centerTotal: true, centerLabel: 'R$', cutout: '55%', plugins: { legend: { position: 'right' }, datalabels: { color: '#fff', font: { weight: 'bold', size: 12 }, formatter: function(v) { return v > 10 ? Math.round(v) : ''; } } } },
+      plugins: [pluginTotalCentro]
+    });
+  }
+
+  // 4. Cliques por plataforma (barras verticais)
+  var elPlatCliques = document.getElementById('chartPlataformaCliques');
+  if (elPlatCliques) {
+    new Chart(elPlatCliques, {
+      type: 'bar',
+      data: {
+        labels: ['Instagram', 'Facebook', 'WhatsApp'],
+        datasets: [{ label: 'Cliques', data: [3848, 708, 3], backgroundColor: [coresPaleta[0], coresPaleta[1], coresPaleta[2]], borderColor: '#fff', borderWidth: 1 }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, datalabels: { anchor: 'end', align: 'top', color: '#1e293b', font: { weight: 'bold', size: 12 } } },
+        scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: '#f1f5f9' } } }
+      }
+    });
+  }
+
+  // 4. CPC por plataforma (barras verticais)
+  var elPlatCPC = document.getElementById('chartPlataformaCPC');
+  if (elPlatCPC) {
+    new Chart(elPlatCPC, {
+      type: 'bar',
+      data: {
+        labels: ['Instagram', 'Facebook', 'WhatsApp'],
+        datasets: [{ label: 'CPC (R$)', data: [2.06, 0.81, 0.70], backgroundColor: [coresPaleta[0], coresPaleta[1], coresPaleta[2]], borderColor: '#fff', borderWidth: 1 }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, datalabels: { anchor: 'end', align: 'top', color: '#1e293b', font: { weight: 'bold', size: 12 }, formatter: function(v) { return v.toFixed(2); } } },
+        scales: { x: { grid: { display: false } }, y: { beginAtZero: true, grid: { color: '#f1f5f9' } } }
+      }
+    });
+  }
+
+  // 5. Gráfico principais anúncios (barras horizontais)
+  var elAnuncios = document.getElementById('chartAnuncios');
+  if (elAnuncios) {
+    new Chart(elAnuncios, {
+      type: 'bar',
+      data: {
+        labels: ["Apartamento para Aluguel", "Alugar um imóvel parece simples", "Converse conosco Apartamento Essence", "Lago Sul terreno legado", "Existem imóveis no Noroeste", "Converse conosco Casa Dom", "Entre em contato conosco", "Mais que ponto comercial", "Lago Sul terreno legado (2)", "Apartamento Selection"],
+        datasets: [{ label: 'Cliques', data: [513, 444, 427, 327, 301, 252, 249, 202, 202, 193], backgroundColor: coresPaleta.slice(0, 10), borderColor: '#fff', borderWidth: 1 }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, datalabels: { anchor: 'end', align: 'end', color: '#1e293b', font: { weight: 'bold', size: 12 }, formatter: function(v) { return v > 0 ? v : ''; } } },
+        layout: { padding: { left: 20, right: 16 } },
+        scales: { x: { beginAtZero: true, grid: { color: '#f1f5f9' } }, y: { grid: { display: false }, ticks: { maxRotation: 0, autoSkip: false, font: { weight: 'bold', size: 11 } } } }
+      }
+    });
+  }
+
+  // Gráfico principais campanhas (barras horizontais)
+  var elCampanhas = document.getElementById('chartCampanhas');
+  if (elCampanhas) {
+    new Chart(elCampanhas, {
+      type: 'bar',
+      data: {
+        labels: ["CAMP LOCAÇÃO NOROESTE", "CAMP LOJA ANA CAPRI", "CAMP REC", "CODEAP219 VIDEO", "CAMP QL16", "ENGAJ LOTE QI16", "CAMP QL26 LOTE", "CASA NOR PILOTO", "CAMP SELEC", "ENGJ SANTORINI"],
+        datasets: [{ label: 'Cliques', data: [566, 451, 444, 433, 395, 354, 327, 301, 295, 203], backgroundColor: coresPaleta.slice(0, 10), borderColor: '#fff', borderWidth: 1 }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, datalabels: { anchor: 'end', align: 'end', color: '#1e293b', font: { weight: 'bold', size: 12 }, formatter: function(v) { return v > 0 ? v : ''; } } },
+        layout: { padding: { left: 20, right: 16 } },
+        scales: { x: { beginAtZero: true, grid: { color: '#f1f5f9' } }, y: { grid: { display: false }, ticks: { maxRotation: 0, autoSkip: false, font: { weight: 'bold', size: 11 } } } }
+      }
+    });
+  }
+
+  // 7. Gráfico demográfico (rosca)
+  var elGenero = document.getElementById('chartGenero');
+  if (elGenero) {
+    new Chart(elGenero, {
+      type: 'doughnut',
+      data: {
+        labels: ['Homem', 'Mulher', 'Desconhecido'],
+        datasets: [{ data: [2378, 2166, 15], backgroundColor: [coresPaleta[0], coresPaleta[1], '#94a3b8'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        centerTotal: true,
+        centerLabel: 'cliques',
+        cutout: '55%',
+        plugins: { legend: { position: 'right' }, datalabels: { color: '#fff', font: { weight: 'bold', size: 14 }, formatter: function(v) { return v > 0 ? v : ''; } } }
+      },
+      plugins: [pluginTotalCentro]
+    });
+  }
+  </script>
+</body>
+</html>
